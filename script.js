@@ -30,8 +30,6 @@ const  newLi = document.createElement('li');
   const li = ul.appendChild(newLi);
   li.textContent = text.value;
   li.addEventListener('click', line.bind(li));
-  li.addEventListener('mouseover', showdlt)
-  li.addEventListener('mouseout', hidedlt)
   btn(li);
 };
 
@@ -44,6 +42,9 @@ function btn(x){
  const dltbtn= x.appendChild(newbtn);
  dltbtn.textContent = 'Delete';
  dltbtn.classList.add('delete');
+ dltbtn.classList.add('hide');
+ x.addEventListener('mouseover', showdlt.bind(dltbtn));
+ x.addEventListener('mouseout', hidedlt.bind(dltbtn));
  dltbtn.addEventListener('click', dltNow.bind(null, x))
 }
 
@@ -52,5 +53,8 @@ function dltNow(y){
 };
 
 function showdlt(){
-  
-}
+  this.classList.remove('hide')
+};
+function hidedlt(){
+    this.classList.add('hide')
+};

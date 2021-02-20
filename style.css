@@ -10,11 +10,63 @@ body{
     margin: 10px auto;
 }
 #head{
+  display: flex;
     background-color: skyblue;
+    width: 100%;
+    padding-right: 10%
+}
+h3{
+  font-size: 25px;
+  width: 100%;
+}
+#add{
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px;
+  height: 70%;
+  border-radius: 25px;
+  /* margin-left: 80px; */
+  margin-top: 10px;
+  color: rgb(95, 95, 95);
+  background-color: rgba(0, 255, 76, 0.432);
+
 }
 .line{
   text-decoration: line-through;
 }
 .delete{
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.418);
+  color: white;
+  padding: 0px;
+  width: 25%;
+  font-size: 20px;
+  margin-left: 10%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ul{
+  list-style:decimal ;
+  margin-top: 1px;
+}
+#list-item{
+  background-color: white;
+  width: 33%;
+  align-items: center;
+  justify-content: center;
+  margin: -10px 35%;
+  padding: 0;
+}
+li{
+  border-bottom:1px dotted grey ;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+#close{
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+}
+.hover:hover{
+  transform: scale(1.2);
+  cursor: pointer;
 }
