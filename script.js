@@ -1,6 +1,5 @@
 const addbtn = document.querySelector('#add');
 const inputBox = document.querySelector('#input');
-const body = document.querySelector('body');
 const closebtn = document.querySelector('#close');
 const text = document.querySelector('input');
 const ul = document.querySelector('ul');
@@ -23,7 +22,7 @@ function check(x){
     generate();
     text.value = '';
   }
-}
+};
 
 function generate(){
 const  newLi = document.createElement('li');
