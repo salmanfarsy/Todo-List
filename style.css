@@ -1,3 +1,14 @@
 body{
     background-color: violet;
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+#list{
+    width: 30%;
+    margin: 10px auto;
+}
+#head{
+    background-color: skyblue;
 }
