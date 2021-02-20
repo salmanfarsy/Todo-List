@@ -12,3 +12,9 @@ body{
 #head{
     background-color: skyblue;
 }
+.line{
+  text-decoration: line-through;
+}
+.delete{
+  background-color: blue;
+}
