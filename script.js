@@ -30,6 +30,8 @@ const  newLi = document.createElement('li');
   const li = ul.appendChild(newLi);
   li.textContent = text.value;
   li.addEventListener('click', line.bind(li));
+  li.addEventListener('mouseover', showdlt)
+  li.addEventListener('mouseout', hidedlt)
   btn(li);
 };
 
@@ -48,3 +50,7 @@ function btn(x){
 function dltNow(y){
   y.remove(this)
 };
+
+function showdlt(){
+  
+}
