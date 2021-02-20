@@ -60,10 +60,13 @@ ul{
   padding: 0;
 }
 li{
+  padding: 5%;
+  width: 100℅;
   border-bottom:1px dotted grey ;
   font-size: 25px;
   margin-bottom: 15px;
-}
+background: white }
+li:nth-child(odd) { background: white; }
 #close{
   color: white;
   background-color: orange;
@@ -79,7 +82,15 @@ li{
 }
 @media only screen and (max-width: 708px){
 #input>input{
-  width: 50%;
+  width: 100%;
+}
+#list{
+  width: 100%;
+}
+#list-item{
+  width: 100%;
+  margin: 0;
+  margin-top: -10px;
 }
 }
 @keyframes fade-slide-in {
