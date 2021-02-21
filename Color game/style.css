@@ -1,0 +1,39 @@
+*{
+  text-align: center;
+}
+body {
+  color: white;
+    font-size: 15pt;
+    background: black;
+}
+#container{
+  max-width: 500px;
+  margin: 5px auto;
+}
+.square{
+  background: red;
+  padding-bottom:40px;
+  margin: 5px;
+  width: 30%;
+  float: left;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.selected{
+  background-color: blue;
+  color: white;
+  border: 1px solid white;
+}
+.none{
+  display: none
+}
+h1{
+  background-color: white;
+  color:black;
+}
+section{
+  background-color: orange;
+}
+p{
+  background-color: pink;
+}
