@@ -18,11 +18,12 @@ body {
   float: left;
   border-radius: 10px;
   transition: all 1s;
+  cursor: pointer;
 }
 .selected{
-  background-color: blue;
-  color: white;
-  border: 1px solid white;
+  background-color: rgb(235, 235, 245);
+  color: rgb(10, 10, 10);
+
 }
 .none{
   display: none
@@ -36,4 +37,17 @@ section{
 }
 p{
   background-color: pink;
+}
+button{
+  border: none;
+  cursor: pointer;
+  background-color: chocolate;
+  outline: none;
+  padding: 0 25px;
+  font-size: 25px;
+  margin: 0 20px;
+}
+#again{
+  margin-right: 400px;
+  background-color: coral;
 }

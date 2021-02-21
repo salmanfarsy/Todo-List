@@ -80,6 +80,23 @@ li:nth-child(odd) { background: white; }
   margin-bottom: 25px;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
+.play{
+  padding: 0;
+  font-size: 20px;
+  background-color: skyblue;
+  outline: none;
+  border: none;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.521);
+}
+a:active,
+a:visited,
+a:link{
+  text-decoration: none;
+  color: rgb(133, 71, 32);
+}
+.play:hover{
+  background-color: black;
+}
 @media only screen and (max-width: 708px){
 #input>input{
   width: 100%;
