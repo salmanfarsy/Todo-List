@@ -1,0 +1,53 @@
+*{
+  text-align: center;
+}
+body {
+  color: white;
+    font-size: 15pt;
+    background: black;
+}
+#container{
+  max-width: 500px;
+  margin: 5px auto;
+}
+.square{
+  background: red;
+  padding-bottom:40px;
+  margin: 5px;
+  width: 30%;
+  float: left;
+  border-radius: 10px;
+  transition: all 1s;
+  cursor: pointer;
+}
+.selected{
+  background-color: rgb(235, 235, 245);
+  color: rgb(10, 10, 10);
+
+}
+.none{
+  display: none
+}
+h1{
+  background-color: white;
+  color:black;
+}
+section{
+  background-color: orange;
+}
+p{
+  background-color: pink;
+}
+button{
+  border: none;
+  cursor: pointer;
+  background-color: chocolate;
+  outline: none;
+  padding: 0 25px;
+  font-size: 25px;
+  margin: 0 20px;
+}
+#again{
+  margin-right: 400px;
+  background-color: coral;
+}

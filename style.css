@@ -60,10 +60,13 @@ ul{
   padding: 0;
 }
 li{
+  padding: 5%;
+  width: 100℅;
   border-bottom:1px dotted grey ;
   font-size: 25px;
   margin-bottom: 15px;
-}
+background: white }
+li:nth-child(odd) { background: white; }
 #close{
   color: white;
   background-color: orange;
@@ -77,14 +80,41 @@ li{
   margin-bottom: 25px;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
+<<<<<<< HEAD
 input{
   outline: none;
   border: none;
   border-bottom: 1px black dashed;
+=======
+.play{
+  padding: 0;
+  font-size: 20px;
+  background-color: skyblue;
+  outline: none;
+  border: none;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.521);
+}
+a:active,
+a:visited,
+a:link{
+  text-decoration: none;
+  color: rgb(133, 71, 32);
+}
+.play:hover{
+  background-color: black;
+>>>>>>> ce935eb08603617f998e67d3fe2dfb7bf2987217
 }
 @media only screen and (max-width: 708px){
 #input>input{
-  width: 50%;
+  width: 100%;
+}
+#list{
+  width: 100%;
+}
+#list-item{
+  width: 100%;
+  margin: 0;
+  margin-top: -10px;
 }
 }
 @keyframes fade-slide-in {
