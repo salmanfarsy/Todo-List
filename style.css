@@ -77,6 +77,11 @@ li{
   margin-bottom: 25px;
   animation: fade-slide-in 0.3s ease-out forwards;
 }
+input{
+  outline: none;
+  border: none;
+  border-bottom: 1px black dashed;
+}
 @media only screen and (max-width: 708px){
 #input>input{
   width: 50%;
