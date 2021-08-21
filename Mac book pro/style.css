@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*text-align: center;*/
+}
+body{
+	font-size: 20px;
+}
+main{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+img{
+	display: block;
+	width: 30%;
+	margin: 10px auto;
+}
+button{
+	font-size: 15px;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 20px;
+	background: transparent;
+	outline: none;
+	border: 1px black solid;
+}
+button:hover{
+	cursor: pointer;
+	background: black;
+	color: white;
+}
+button:active{
+	border: 5px solid grey;
+}
+.prices{
+	width: 50%;
+}
+.cost{
+	display: flex;
+	justify-content: space-between;
+	margin: 20px auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.border{
+	border-bottom: 2px solid black;
+}
+.total{
+	text-align: center;
+}
+.promo{
+	display: block;
+}
+@media only screen and (min-width: 700px){
+	main{
+		display: flex;
+		width: 90%;
+		margin: 40px auto;
+	}
+	img{
+		width: 50vw;
+		height: 50vh;
+	}
+	.container{
+		margin: 0 20px;
+		padding: 0 3rem;
+	}
+}
