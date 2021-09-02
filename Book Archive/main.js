@@ -47,9 +47,9 @@ const showBooks = (data)=>{
         <h1>Title : ${books.title}</h1>
        	<img src='${imageUrl}' alt='${books.title}'/>
         <h2>Author : ${!books.author_name? 'Unkown': books.author_name}</h2>
-        <h3>Publish Year : ${books.publish_year? 'Unkown':books.publish_year }</h3>
-        <h4>Publisher : ${books.publisher ? 'Unkown': books.publisher}</h4>
-        <h5>First Publish Year : ${books.first_publish_year ? 'Unkown': books.first_publish_year }</h5>
+        <h3>Publish Year : ${!books.publish_year? 'Unkown':books.publish_year }</h3>
+        <h4>Publisher : ${!books.publisher ? 'Unkown': books.publisher}</h4>
+        <h5>First Publish Year : ${!books.first_publish_year ? 'Unkown': books.first_publish_year }</h5>
         `
         results.appendChild(div);
 	})
