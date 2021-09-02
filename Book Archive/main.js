@@ -3,33 +3,41 @@ const searchBtn = document.querySelector('button');
 const searchField = document.querySelector('input');
 const loading =  document.querySelector('.loading');
 const results = document.querySelector('#results');
+const number = document.querySelector('#number');
 
 
 
 //function
 //fetch data
 const search = ()=>{
-loading.style.display = 'block';
+
 results.innerHTML = '';
-	const input = searchField.value; 
-	const searchBook = `http://openlibrary.org/search.json?q=${input}`
+document.querySelector('.found').style.display = 'none';
+	const input = searchField.value;
+	const searchBook = `http://openlibrary.org/search.json?q=${input}` 
+	if(input !== ''){
+		loading.style.display = 'block';
 	fetch(searchBook)
 	.then(data => data.json())
 	.then(data => showBooks(data))
+	} else {
+		document.querySelector('#error').style.display = 'block';
+	} 
 } 
 
 //show books on html
 const showBooks = (data)=>{
 	if(data.docs.length > 0){
-	console.log(data.docs[0])
+		document.querySelector('.found').style.display = 'block';
+	number.textContent =data.numFound;
+	console.log(data.numFound)
 	data.docs.forEach((books)=>{
-		const img = [];
-		// const url = `https://covers.openlibrary.org/b/id/${books.cover_i}-L.jpg`
-		// fetch(url).then(data=> data.json()).then(data=> console.log(data));
+		const imageUrl = `https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg`;
 		  const div = document.createElement('div');
         div.classList.add('book');
         div.innerHTML = `
         <h1>Title : ${books.title}</h1>
+       	<img src='${imageUrl}' alt='${books.title}'/>
         <h2>Author : ${books.author_name}</h2>
         <h3>Publish Year : ${books.publish_year}</h3>
         <h4>Publisher : ${books.publisher}</h4>
