@@ -4,6 +4,7 @@ const searchField = document.querySelector('input');
 const loading =  document.querySelector('.loading');
 const results = document.querySelector('#results');
 const number = document.querySelector('#number');
+const errorDisplay = document.querySelector('#error');
 
 
 
@@ -17,18 +18,25 @@ document.querySelector('.found').style.display = 'none';
 	const searchBook = `http://openlibrary.org/search.json?q=${input}` 
 	if(input !== ''){
 		loading.style.display = 'block';
+		errorDisplay.style.display = 'none';
+		searchField.value ='';
 	fetch(searchBook)
 	.then(data => data.json())
 	.then(data => showBooks(data))
+	.catch(error=>{errorDisplay.style.display = 'block';
+loading.style.display = 'none';	})
 	} else {
-		document.querySelector('#error').style.display = 'block';
+		errorDisplay.style.display = 'block';
+		errorDisplay.textContent = 'Empty Input please Enter Text';
+		loading.style.display = 'none';	
 	} 
 } 
 
 //show books on html
 const showBooks = (data)=>{
-	if(data.docs.length > 0){
+	if(data.docs.length !== 0){
 		document.querySelector('.found').style.display = 'block';
+
 	number.textContent =data.numFound;
 	console.log(data.numFound)
 	data.docs.forEach((books)=>{
@@ -52,7 +60,12 @@ const showBooks = (data)=>{
 	// 		`)
 	// })
 	// results.innerHTML = bookHtml;
-	loading.style.display = 'none';		
+	loading.style.display = 'none';	
+
+} else{
+	errorDisplay.style.display = 'block';
+		errorDisplay.textContent = 'No Results';
+		loading.style.display = 'none';	
 }
 	
 }

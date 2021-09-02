@@ -3,13 +3,31 @@
 	padding: 0;
 	box-sizing: border-box;
 	text-align: center;
+	font-family: sans-serif;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(lightgreen, lime);
+	padding: 1% 5%;
+}
+nav{
+	display: flex;
+}
+nav p{
+	margin: 10px;
 }
 #error{
 	display: none;
 	color: red;
+	font-size: 2rem;
 }
 .search{
 	margin: 10px auto;
+}
+.search h1{
+	color: green;
 }
 button{
 	padding: 10px;
@@ -18,9 +36,17 @@ button{
 input{
 	padding: 20px 50px;
 	width: 30%;
+	font-size: 1.5rem;
 }
 .loading{
+	height: 100px;
+	margin: 10px auto;
+	width: 100px;
 	display: none;
+	border: 3px solid black;
+	border-bottom: none;
+	border-radius: 150px;
+	animation: rotate linear 0.5s infinite;
 }
 #results{
 	display: flex;
@@ -34,15 +60,29 @@ input{
     word-break: break-word;
     padding: 10px;
     box-shadow: 0 0 5px 2px;
+    background: linear-gradient(lightgreen, lime);
 }
 .book > *{
 	margin: 10px auto;
 }
 .found{
 	display: none;
+	background: linear-gradient(lightgreen, lime);
+	padding: 10px;
 }
 @media all and (max-width: 750px){
 	.book{
 		width: 50vw;
 	}
+	::placeholder{
+		font-size: 1rem;
+	}
+}
+@keyframes rotate{
+from{
+	transform: rotate(0);
+}
+to{
+	transform: rotate(360deg);
+}
 }
